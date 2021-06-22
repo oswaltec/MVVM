@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MVVM.Views.Operations">
+    <ContentPage.Content>
+        <StackLayout Padding="10" VerticalOptions="CenterAndExpand">
+            <Label Text="4 operaciones matemáticas" FontSize="Title" HorizontalTextAlignment="Center"
+                   BackgroundColor="Blue" TextColor="White" Padding="5"/>
+            <StackLayout Orientation="Vertical">
+                <Label Text="Valor 1"/>
+                <Editor Text="{Binding Valor1}"  Placeholder="Ingrese un número" Keyboard="Numeric" 
+                        TextColor="Blue"></Editor>
+                <Label Text="Valor 2"/>
+                <Editor Text="{Binding Valor2}" Placeholder="Ingrese un número" Keyboard="Numeric" 
+                        TextColor="Blue"></Editor>
+            </StackLayout>
+
+            <StackLayout Orientation="Vertical">
+                <Button Text="Sumar" Command="{Binding Sumar}"/>
+                <Label Text="{Binding ResultSuma}" FontSize="Medium" TextColor="Black"/>
+            </StackLayout>
+            <StackLayout Orientation="Vertical">
+                <Button Text="Restar" Command="{Binding Restar}"/>
+                <Label Text="{Binding ResultResta}" FontSize="Medium" TextColor="Black"/>
+            </StackLayout>
+        
+            <StackLayout Orientation="Vertical">
+                <Button Text="Multiplicar" Command="{Binding Multiplicar}"/>
+                <Label Text="{Binding ResultMultiplicar}" FontSize="Medium" TextColor="Black"/>
+            </StackLayout>
+
+            <StackLayout Orientation="Vertical">
+                <Button Text="Dividir" Command="{Binding Dividir}"/>
+                <Label Text="{Binding ResultDividir}" FontSize="Medium" TextColor="Black"/>
+            </StackLayout>
+            <Label Text="By. Oswaldo Cadenas" FontSize="Medium" HorizontalTextAlignment="Center"
+                   BackgroundColor="Blue" TextColor="White" Padding="5"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
